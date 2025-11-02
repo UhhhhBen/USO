@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="toolbar">
+      <div class="tool" data-tool="brush" title="Brush"><svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="7" fill="#222"/><rect x="14" y="25" width="4" height="6" fill="#222"/></svg></div>
+      <div class="tool" data-tool="eraser" title="Eraser"><svg width="32" height="32" viewBox="0 0 32 32"><rect x="6" y="20" width="20" height="8" fill="#eee" stroke="#222" stroke-width="2"/><rect x="10" y="6" width="12" height="12" fill="#fff" stroke="#222" stroke-width="2"/></svg></div>
+      <div class="tool" data-tool="rectangle" title="Rectangle"><svg width="32" height="32"><rect x="8" y="8" width="16" height="16" fill="none" stroke="#222" stroke-width="2"/></svg></div>
+      <div class="tool" data-tool="circle" title="Circle"><svg width="32" height="32"><circle cx="16" cy="16" r="10" fill="none" stroke="#222" stroke-width="2"/></svg></div>
+      <div class="tool" data-tool="line" title="Line"><svg width="32" height="32"><line x1="8" y1="24" x2="24" y2="8" stroke="#222" stroke-width="2"/></svg></div>
+      <div class="tool" data-tool="fill" title="Fill"><svg width="32" height="32"><rect x="8" y="16" width="16" height="8" fill="#222"/><rect x="8" y="8" width="16" height="8" fill="#eee" stroke="#222" stroke-width="2"/></svg></div>
+    </aside>
+    <main>
+      <div class="controls">
+        <label>
+          <span class="icon"><svg width="24" height="24"><circle cx="12" cy="12" r="10" fill="#222"/></svg></span>
+          <input type="color" id="color" value="#222222">
+        </label>
+        <label>
+          <span class="icon"><svg width="24" height="24"><rect x="6" y="10" width="12" height="4" fill="#222"/></svg></span>
+          <input type="range" id="thickness" min="1" max="40" value="6">
+        </label>
+        <label>
+          <span class="icon"><svg width="24" height="24"><rect x="4" y="4" width="16" height="16" fill="#222" opacity="0.5"/></svg></span>
+          <input type="range" id="opacity" min="0.1" max="1" step="0.01" value="1">
+        </label>
+      </div>
+      <div class="canvas-container" id="canvasContainer"></div>
+    </main>
+    <aside class="layers-panel">
+      <div class="layers-header">
+        <span>Layers</span>
+        <button id="addLayer" title="Add Layer">+</button>
+        <button id="removeLayer" title="Remove Layer">-</button>
+      </div>
+      <ul id="layerList"></ul>
+    </aside>
+  </div>
+  <script src="drawing.js"></script>
+</body>
+</html>
